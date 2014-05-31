@@ -6,7 +6,7 @@ Python package to detect and return RSS feeds for a given website. It has been t
 Tested platforms:
 =================
   - Wordpress, Blogger, Tumblr, Ghost, Svbtle and Medium
-  - Works with most of the blogs on the web though they not be built with above platforms.
+  - Works with most of the blogs on the web even though they are not be built with above platforms.
   
 Requirements:
 =============
