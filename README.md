@@ -3,6 +3,15 @@ GrabFeed
 
 Python package to detect and return RSS feeds for a given website. It has been tested with major blogging platforms.
 
+Installation
+========
+- pip install grabfeed
+* Make sure you have installed the following dependencies:
+- urllib2 (pip install urllib2)
+- Beautifulsoup (pip install Beautifulsoup)
+
+
+
 Tested platforms:
 =================
   - Wordpress, Blogger, Tumblr, Ghost, Svbtle and Medium
