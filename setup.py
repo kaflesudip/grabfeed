@@ -9,5 +9,8 @@ setup(
     url='https://github.com/kaflesudip/grabfeed',
     download_url='https://github.com/kaflesudip/grabfeed/tarball/0.1',
     keywords=['RSS', 'Feeds', 'Scraping'],
+    install_requires=[
+        'BeautifulSoup==3.2.1',
+    ],
     classifiers=[],
 )
