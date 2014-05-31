@@ -4,7 +4,7 @@ import urlparse
 
 
 def return_rss(page_url):
-
+    # inpired from quora post: bit.ly/1jGKdMY
     # Use haders to avoid being blocked
     hdr = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11'
