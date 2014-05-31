@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
-    name='GrabFeed',
-    packages=['GrabFeed'],
+    name='grabfeed',
+    packages=['grabfeed'],
     version='0.1',
     description='Detects and return RSS feeds for a given website.',
     author='Sudip Kafle',
