@@ -16,11 +16,14 @@ def return_rss(page_url):
         'Accept-Language': 'en-US,en;q=0.8',
         'Connection': 'keep-alive'
     }
-    req = urllib2.Request(page_url, headers=hdr)
-    page = urllib2.urlopen(req)
-    soup = BeautifulSoup(page)
-    link = soup.find('link', type='application/rss+xml')
-    rss_link = link['href']
+    try:
+        req = urllib2.Request(page_url, headers=hdr)
+        page = urllib2.urlopen(req)
+        soup = BeautifulSoup(page)
+        link = soup.find('link', type='application/rss+xml')
+        rss_link = link['href']
+    except:
+        return ''
 
     # some website return absolute url while some have relative.
     if not urlparse.urlparse(rss_link).netloc:

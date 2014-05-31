@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+grabfeed/__init__.py
+grabfeed/grabber.py
+grabfeed.egg-info/PKG-INFO
+grabfeed.egg-info/SOURCES.txt
+grabfeed.egg-info/dependency_links.txt
+grabfeed.egg-info/requires.txt
+grabfeed.egg-info/top_level.txt
