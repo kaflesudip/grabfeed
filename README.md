@@ -11,6 +11,6 @@ Tested platforms:
 Requirements:
 =============
   GrabFeed uses following modules as its requirments:
-  urllib2
-  Beautifulsoup
+  - urllib2
+  - Beautifulsoup
   
