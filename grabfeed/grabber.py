@@ -1,11 +1,11 @@
 import urllib2
 from BeautifulSoup import BeautifulSoup
 import urlparse
+import xmltodict
 
 
-def return_rss(page_url):
-    # inpired from quora post: bit.ly/1jGKdMY
-    # Use haders to avoid being blocked
+def return_page_content(page_url):
+     # Use haders to avoid being blocked
     hdr = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11'
         ' (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
@@ -19,12 +19,19 @@ def return_rss(page_url):
     try:
         req = urllib2.Request(page_url, headers=hdr)
         page = urllib2.urlopen(req)
-        soup = BeautifulSoup(page)
-        link = soup.find('link', type='application/rss+xml')
-        rss_link = link['href']
+        return page
     except:
         return ''
 
+
+def return_rss(page_url):
+    # inpired from quora post: bit.ly/1jGKdMY
+    page_content = return_page_content(page_url)
+    if page_content == '':
+        return ''
+    soup = BeautifulSoup(page_content)
+    link = soup.find('link', type='application/rss+xml')
+    rss_link = link['href']
     # some website return absolute url while some have relative.
     if not urlparse.urlparse(rss_link).netloc:
         if not page_url in rss_link:
@@ -44,23 +51,13 @@ def return_rss(page_url):
     return rss_link
 
 
-def test():
-    blog_list = [
-        'http://joel.is',
-        'http://cricketcurrent.blogspot.com',
-        'http://technott.com',  # wordpress with cloudflare
-        'http://labnol.org',  # wordpress normal
-        'http://blog.kissmetrics.com',  # wordpress
-        'http://blog.bufferapp.com',  # wordpress with some security
-        'http://blog.audeet.com',  # ghost blog
-        'http://manojghimire.com/',  # svbtle blog
-        'https://medium.com/@felixsalmon',  # medium with relative
-        'http://technott.com/2014/02/'
-        'google-online-interactive-learning-tool-oppia/',  # wordpress relative
-        'http://lifehacker.com',  # custom blog
-    ]
-    for item in blog_list:
-        try:
-            print(return_rss(item))
-        except:
-            print('could not find for {0}'.format(item))
+def return_content(page_url, return_type='dict'):
+    rss_page_url = return_rss(page_url)
+    page_content = return_page_content(rss_page_url).read()
+    if return_type == 'xml':
+        return page_content
+    else:
+        content = xmltodict.parse(page_content)
+        return content
+
+print return_content('http://blog.flipkarma.com')
