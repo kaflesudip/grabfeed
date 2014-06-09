@@ -51,7 +51,7 @@ def return_rss(page_url):
     return rss_link
 
 
-def return_content(page_url, return_type='dict'):
+def return_content(page_url, return_type='json'):
     rss_page_url = return_rss(page_url)
     page_content = return_page_content(rss_page_url).read()
     if return_type == 'xml':
@@ -59,5 +59,3 @@ def return_content(page_url, return_type='dict'):
     else:
         content = xmltodict.parse(page_content)
         return content
-
-print return_content('http://blog.flipkarma.com')
