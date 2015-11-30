@@ -11,24 +11,27 @@ Installation
 - requests
 
     ````pip install Beautifulsoup````
-
     ````pip install requests````
 
 
 Example Code
 ============
 
-* Return RSS feed
+### Return RSS feed
 
-    from grabfeed.grabber import return_rss
-    rss_feed = return_rss('http://techcrunch.com')
-    print(rss_feed)
+```python
+from grabfeed.grabber import return_rss
+rss_feed = return_rss('http://techcrunch.com')
+print(rss_feed)
+```
 
-* Return RSS content
+### Return RSS content
 
-	from grabfeed.grabber import return_page_content
-    page_content= return_page_content('http://techcrunch.com')
-    print(page_content)
+```python
+from grabfeed.grabber import return_page_content
+page_content= return_page_content('http://techcrunch.com')
+print(page_content)
+```
 
 Tested platforms:
 =================
