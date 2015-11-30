@@ -1,6 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
-import urllib
+try:
+    from urllib.parse import urlparse
+except ImportError:
+    from urlparse import urlparse
 import traceback
 
 
@@ -36,9 +39,9 @@ def return_rss(page_url):
     if not rss_link:
         raise Exception("The page has no RSS feed")
     # some website return absolute url while some have relative.
-    if not urllib.parse.urlparse(rss_link).netloc:
+    if not urlparse(rss_link).netloc:
         if page_url not in rss_link:
-            domain_parse = urllib.parse.urlparse(
+            domain_parse = urlparse(
                 '{0}'.format(page_url)
             )
             complete_domain = '{0}://{1}'.format(
