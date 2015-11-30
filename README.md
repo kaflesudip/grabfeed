@@ -24,4 +24,5 @@ Tested platforms:
 =================
   - Wordpress, Blogger, Tumblr, Ghost, Svbtle and Medium
   - Works with most of the blogs on the web even though they are not be built with above platforms.
+  - Supports Python 2.6, 2.7, 3.2, 3.3, 3.4 and pypy
  
