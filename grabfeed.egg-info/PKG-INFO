@@ -1,12 +1,12 @@
 Metadata-Version: 1.1
 Name: grabfeed
-Version: 0.1
+Version: 0.2
 Summary: Detects and return RSS feeds for a given website.
 Home-page: https://github.com/kaflesudip/grabfeed
 Author: Sudip Kafle
 Author-email: soodip.kafle@gmail.com
 License: UNKNOWN
-Download-URL: https://github.com/kaflesudip/grabfeed/tarball/0.1
+Download-URL: https://github.com/kaflesudip/grabfeed/tarball/0.2
 Description: UNKNOWN
 Keywords: RSS,Feeds,Scraping
 Platform: UNKNOWN

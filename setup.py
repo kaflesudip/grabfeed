@@ -2,15 +2,16 @@ from setuptools import setup
 setup(
     name='grabfeed',
     packages=['grabfeed'],
-    version='0.1',
+    version='0.2',
     description='Detects and return RSS feeds for a given website.',
     author='Sudip Kafle',
     author_email='soodip.kafle@gmail.com',
     url='https://github.com/kaflesudip/grabfeed',
-    download_url='https://github.com/kaflesudip/grabfeed/tarball/0.1',
+    download_url='https://github.com/kaflesudip/grabfeed/tarball/0.2',
     keywords=['RSS', 'Feeds', 'Scraping'],
     install_requires=[
-        'BeautifulSoup==3.2.1',
+        'beautifulsoup4==4.4.1',
+        'requests==2.8.1'
     ],
     classifiers=[],
 )
