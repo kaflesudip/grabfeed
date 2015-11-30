@@ -6,13 +6,6 @@ Python package to detect and return RSS feeds for a given website. It has been t
 Installation
 ============
     pip install grabfeed
-* Make sure you have installed the following dependencies:
-- Beautifulsoup4
-- requests
-
-    ````pip install Beautifulsoup````
-    ````pip install requests````
-
 
 Example Code
 ============
