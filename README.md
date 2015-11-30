@@ -1,6 +1,8 @@
 GrabFeed
 ========
 
+[![Build Status](https://travis-ci.org/kaflesudip/grabfeed.svg?branch=master)](https://travis-ci.org/kaflesudip/grabfeed)
+
 Python package to detect and return RSS feeds for a given website. It has been tested with major blogging platforms.
 
 Installation
@@ -16,14 +18,6 @@ Example Code
 from grabfeed.grabber import return_rss
 rss_feed = return_rss('http://techcrunch.com')
 print(rss_feed)
-```
-
-### Return RSS content
-
-```python
-from grabfeed.grabber import return_page_content
-page_content= return_page_content('http://techcrunch.com')
-print(page_content)
 ```
 
 Tested platforms:
