@@ -29,5 +29,12 @@ class TestGrabber(unittest.TestCase):
             'https://blog.ghost.org/rss/'
         )
 
+    def test_medium(self):
+        link = 'https://medium.com/stories-from-nlocate'
+        self.assertEqual(
+            return_rss(link),
+            'https://medium.com/feed/stories-from-nlocate'
+        )
+
 if __name__ == '__main__':
     unittest.main()
