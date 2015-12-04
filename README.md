@@ -2,6 +2,8 @@ GrabFeed
 ========
 
 [![Build Status](https://travis-ci.org/kaflesudip/grabfeed.svg?branch=master)](https://travis-ci.org/kaflesudip/grabfeed)
+[![PyPI version](https://badge.fury.io/py/grabfeed.svg)](https://badge.fury.io/py/grabfeed)
+
 
 Python package to detect and return RSS feeds for a given website. It has been tested with major blogging platforms.
 
