@@ -2,6 +2,7 @@ GrabFeed
 ========
 
 [![Build Status](https://travis-ci.org/kaflesudip/grabfeed.svg?branch=master)](https://travis-ci.org/kaflesudip/grabfeed)
+[![Coverage Status](https://coveralls.io/repos/kaflesudip/grabfeed/badge.svg?branch=master&service=github)](https://coveralls.io/github/kaflesudip/grabfeed?branch=master)
 [![PyPI version](https://badge.fury.io/py/grabfeed.svg)](https://badge.fury.io/py/grabfeed)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/grabfeed.svg)](https://pypi.python.org/pypi/grabfeed)
 
