@@ -1,2 +1,17 @@
+Babel==2.1.1
+Jinja2==2.8
+MarkupSafe==0.23
+PyYAML==3.11
+Pygments==2.0.2
+Sphinx==1.3.3
+alabaster==0.7.6
 beautifulsoup4==4.4.1
+coverage==3.7.1
+docutils==0.12
+python-coveralls==2.5.0
+pytz==2015.7
 requests==2.8.1
+sh==1.11
+six==1.10.0
+snowballstemmer==1.2.0
+sphinx-rtd-theme==0.1.9
