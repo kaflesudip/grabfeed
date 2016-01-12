@@ -2,7 +2,7 @@ from setuptools import setup
 setup(
     name='grabfeed',
     packages=['grabfeed'],
-    version='0.3.1',
+    version='0.3.2',
     description='Detects and return RSS feeds for a given website.',
     author='Sudip Kafle',
     author_email='soodip.kafle@gmail.com',

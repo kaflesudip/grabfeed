@@ -4,6 +4,14 @@ from grabber import return_rss
 
 class TestGrabber(unittest.TestCase):
 
+    def test_error_on_invalid_url(self):
+        link = "http://example"
+        self.assertRaises(Exception, return_rss, link)
+
+    def test_error_on_url_without_feed(self):
+        link = "http://example.com"
+        self.assertRaises(Exception, return_rss, link)
+
     def test_wordpress(self):
         link = "http://techcrunch.com"
         self.assertEqual(return_rss(link), 'http://techcrunch.com/feed/')
@@ -34,6 +42,13 @@ class TestGrabber(unittest.TestCase):
         self.assertEqual(
             return_rss(link),
             'https://medium.com/feed/stories-from-nlocate'
+        )
+
+    def test_tumblr(self):
+        link = "http://staff.tumblr.com/"
+        self.assertEqual(
+            return_rss(link),
+            'http://staff.tumblr.com/rss'
         )
 
 if __name__ == '__main__':
