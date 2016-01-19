@@ -5,6 +5,7 @@ GrabFeed
 [![Coverage Status](https://coveralls.io/repos/kaflesudip/grabfeed/badge.svg?branch=master&service=github)](https://coveralls.io/github/kaflesudip/grabfeed?branch=master)
 [![PyPI version](https://badge.fury.io/py/grabfeed.svg)](https://badge.fury.io/py/grabfeed)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/grabfeed.svg)](https://pypi.python.org/pypi/grabfeed)
+[![PyPI Downloads](https://readthedocs.org/projects/grabfeed/badge/?version=latest)](http://grabfeed.readthedocs.org/en/latest/)
 
 
 Python package to detect and return RSS feeds for a given website. It has been tested with major blogging platforms.
