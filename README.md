@@ -10,7 +10,7 @@ GrabFeed
 Python package to detect and return RSS feeds for a given website. It has been tested with major blogging platforms.
 
 1. You enter a URL.
-2. Grafeed detects and returns RSS feed URL for the website.
+2. Grabfeed detects and returns RSS feed URL for the website.
 
 Installation
 ============
