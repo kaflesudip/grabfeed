@@ -29,6 +29,9 @@ def return_rss(page_url):
     soup = BeautifulSoup(page_content, "html.parser")
     link = soup.find('link', type='application/rss+xml')
     if not link:
+        link = soup.find('link',type='application/atom+xml')
+        
+    if not link:
         raise Exception("The page has no RSS feed")
     rss_link = link.get('href')
     return rss_link
