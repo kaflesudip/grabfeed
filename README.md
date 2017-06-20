@@ -10,10 +10,10 @@ GrabFeed
 
 
 
-Python package to detect and return RSS feeds for a given website. It has been tested with major blogging platforms.
+Python package to detect and return RSS / Atom feeds for a given website. It has been tested with major blogging platforms.
 
 1. You enter a URL.
-2. Grabfeed detects and returns RSS feed URL for the website.
+2. Grabfeed detects and returns RSS / Atom feed URL for the website.
 
 Installation
 ============
@@ -29,6 +29,15 @@ from grabfeed.grabber import return_rss
 rss_feed = return_rss('http://techcrunch.com')
 print(rss_feed)
 # output: http://techcrunch.com/feed/
+```
+
+### Return Atom feed
+
+```python
+from grabfeed.grabber import return_atom
+atom_feed = return_atom('https://google.blogspot.com/')
+print(atom_feed)
+# output: https://google.blogspot.com/feeds/posts/default
 ```
 
 Tested platforms:
