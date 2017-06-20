@@ -13,14 +13,14 @@ class TestGrabber(unittest.TestCase):
         self.assertRaises(Exception, return_rss, link)
 
     def test_wordpress(self):
-        link = "http://techcrunch.com"
-        self.assertEqual(return_rss(link), 'http://techcrunch.com/feed/')
+        link = "https://techcrunch.com"
+        self.assertEqual(return_rss(link), 'https://techcrunch.com/feed/')
 
     def test_blogger(self):
-        link = "http://google.blogspot.com/"
+        link = "https://google.blogspot.com/"
         self.assertEqual(
             return_rss(link),
-            'http://google.blogspot.com/feeds/posts/default?alt=rss'
+            'https://google.blogspot.com/feeds/posts/default?alt=rss'
         )
 
     def test_svtle(self):
@@ -45,10 +45,10 @@ class TestGrabber(unittest.TestCase):
         )
 
     def test_tumblr(self):
-        link = "http://staff.tumblr.com/"
+        link = "https://staff.tumblr.com/"
         self.assertEqual(
             return_rss(link),
-            'http://staff.tumblr.com/rss'
+            'https://staff.tumblr.com/rss'
         )
 
 if __name__ == '__main__':
