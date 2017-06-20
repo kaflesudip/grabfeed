@@ -54,7 +54,11 @@ class TestRSS(unittest.TestCase):
 
 class TestAtom(unittest.TestCase):
 
-   def test_blogger(self):
+    def test_error_on_url_without_feed(self):
+        link = "http://example.com"
+        self.assertRaises(Exception, return_atom, link)
+
+    def test_blogger(self):
         link = "https://google.blogspot.com/"
         self.assertEqual(
             return_atom(link),
