@@ -1,6 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 
+class Grabfeed:
+    rss = None
+    atom = None
+
+    def __init__(self, rss, atom):
+        self.rss = rss
+        self.atom = atom
 
 def return_page_content(page_url):
     # Use haders to avoid being blocked
@@ -23,23 +30,31 @@ def return_page_content(page_url):
 
 
 def return_rss(page_url):
-    # inpired from quora post: bit.ly/1jGKdMY
-    page_content = return_page_content(page_url)
-    rss_link = ''
-    soup = BeautifulSoup(page_content, "html.parser")
-    link = soup.find('link', type='application/rss+xml')        
-    if not link:
+    rss_link = return_feed(page_url).rss
+    if not rss_link:
         raise Exception("The page has no RSS feed")
-    rss_link = link.get('href')
     return rss_link
 
 def return_atom(page_url):
+    atom_link = return_feed(page_url).atom
+    if not atom_link:
+        raise Exception("The page has no Atom feed")
+    return atom_link
+
+
+def return_feed(page_url):
     page_content = return_page_content(page_url)
     atom_link = ''
     soup = BeautifulSoup(page_content, "html.parser")
-    link = soup.find('link',type='application/atom+xml')
+    atom_link = soup.find('link',type='application/atom+xml')
         
-    if not link:
-        raise Exception("The page has no Atom feed")
-    atom_link = link.get('href')
-    return atom_link
+    if not atom_link:
+        atom_link = False
+    else:
+        atom_link = atom_link.get('href')
+    rss_link = soup.find('link', type='application/rss+xml')        
+    if not rss_link:
+        rss_link = False
+    else:
+        rss_link = rss_link.get('href')
+    return Grabfeed(rss=rss_link, atom=atom_link)
