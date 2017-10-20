@@ -1,5 +1,5 @@
 import unittest
-from grabber import return_rss, return_atom
+from grabber import return_rss, return_atom, return_feed
 
 
 class TestRSS(unittest.TestCase):
@@ -64,6 +64,14 @@ class TestAtom(unittest.TestCase):
             return_atom(link),
             'https://google.blogspot.com/feeds/posts/default'
         )
+
+class TestNewStyle(unittest.TestCase):
+
+    def test_wordpress(self):
+        link = "https://google.blogspot.com/"
+        feed = return_feed(link)
+        self.assertEqual(feed.atom, 'https://google.blogspot.com/feeds/posts/default')
+        self.assertEqual(feed.rss, 'https://google.blogspot.com/feeds/posts/default?alt=rss')
 
 
 if __name__ == '__main__':
