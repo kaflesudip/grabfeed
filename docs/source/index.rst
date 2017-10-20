@@ -13,23 +13,25 @@ Installation
 Example Code
 ============
 
-### Return RSS feed
+Return RSS feed
+------------------
 
-```python
-from grabfeed.grabber import return_feed
-feed = return_feed('http://techcrunch.com')
-print(feed.rss)
-# output: http://techcrunch.com/feed/
-```
+.. code-block:: python
 
-### Return Atom feed
+		from grabfeed.grabber import return_feed
+		feed = return_feed('http://techcrunch.com')
+		print(feed.rss)
 
-```python
-from grabfeed.grabber import return_feed
-feed = return_feed('https://google.blogspot.com/')
-print(feed.atom)
-# output: https://google.blogspot.com/feeds/posts/default
-```
+Return Atom feed
+------------------
+
+.. code-block:: python
+
+		from grabfeed.grabber import return_feed
+		feed = return_feed('https://google.blogspot.com/')
+		print(feed.atom)
+		# output: https://google.blogspot.com/feeds/posts/default
+
 
 Tested platforms:
 =================
