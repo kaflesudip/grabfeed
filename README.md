@@ -25,18 +25,18 @@ Example Code
 ### Return RSS feed
 
 ```python
-from grabfeed.grabber import return_rss
-rss_feed = return_rss('http://techcrunch.com')
-print(rss_feed)
+from grabfeed.grabber import return_feed
+feed = return_feed('http://techcrunch.com')
+print(feed.rss)
 # output: http://techcrunch.com/feed/
 ```
 
 ### Return Atom feed
 
 ```python
-from grabfeed.grabber import return_atom
-atom_feed = return_atom('https://google.blogspot.com/')
-print(atom_feed)
+from grabfeed.grabber import return_feed
+feed = return_feed('https://google.blogspot.com/')
+print(feed.atom)
 # output: https://google.blogspot.com/feeds/posts/default
 ```
 
