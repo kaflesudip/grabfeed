@@ -1,44 +1,45 @@
-.. Grabfeed documentation master file, created by
-   sphinx-quickstart on Tue Jan 19 09:26:38 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+GrabFeed
+========
 
-Welcome to Grabfeed's documentation!
-====================================
-Python package to detect and return RSS feeds for a given website. It has been tested with major blogging platforms.
+Python package to detect and return RSS / Atom feeds for a given website. It has been tested with major blogging platforms.
 
-	1. You enter a URL.
-	2. Grabfeed detects and returns RSS feed URL for the website.
+1. You enter a URL.
+2. Grabfeed detects and returns RSS / Atom feed URL for the website.
 
-Getting Started with Grabfeed
--------------------------------
+Installation
+============
+    pip install grabfeed
 
-Install it with pip::
+Example Code
+============
 
-	pip install grabfeed
+### Return RSS feed
 
+```python
+from grabfeed.grabber import return_feed
+feed = return_feed('http://techcrunch.com')
+print(feed.rss)
+# output: http://techcrunch.com/feed/
+```
 
-Sample Code:
---------------
+### Return Atom feed
 
-An example code to run Grabfeed and return RSS feed::
-
-	from grabfeed.grabber import return_rss
-	rss_feed = return_rss('http://techcrunch.com')
-	print(rss_feed)
-	# output: http://techcrunch.com/feed/
-
+```python
+from grabfeed.grabber import return_feed
+feed = return_feed('https://google.blogspot.com/')
+print(feed.atom)
+# output: https://google.blogspot.com/feeds/posts/default
+```
 
 Tested platforms:
--------------------
-
+=================
   - Wordpress, Blogger, Tumblr, Ghost, Svbtle and Medium
   - Works with most of the blogs on the web even though they are not be built with above platforms.
   - Support for:
-  	* Python 2.6
-  	* Python 2.7
-  	* Python 3.2
-  	* Python 3.3
-  	* Python3.4
-  	* And even Pypy!
+    * Python 2.7
+    * Python 3.3
+    * Python 3.4
+    * Python 3.5
+    * Python 3.6
   - 100% test coverage
+ 
